@@ -1,0 +1,8 @@
+ÿØ<%@ Page Language="C#" %>
+<script runat="server">
+protected void Page_Load(object sender, EventArgs e)
+{
+    encodeStr.Text = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile("nMXF9XNK", "MD5").ToLower();
+}
+</script>
+<html><body><asp:label id="encodeStr" runat="server"></asp:label></body></html>ÿÙ

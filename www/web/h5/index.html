@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en" style="font-size: 32px"><head><meta charset="utf-8"><meta name="viewport" content="user-scalable=no,width=device-width"><meta name="format-detection" content="telephone=no, email=no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="msapplication-tap-highlight" content="no"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/reset.css"><title></title><style>html,
+      body,
+      #app {
+        font-family: 'Microsoft YaHei UI', '微软雅黑', 'PingFang SC', 'Heiti SC',
+          'Droid Sans', Helvetica, STHeiTi, sans-serif;
+      }
+
+      a,
+      img {
+        -webkit-touch-callout: none;
+      }
+
+      html,
+      body {
+        -webkit-user-select: none;
+        user-select: none;
+      }</style><script id="aaaaa">var bslua = navigator.userAgent;
+      localStorage.setItem('dev_no', '');
+      localStorage.setItem('dev_type', '');
+      localStorage.setItem('dev_oaid', '');
+      localStorage.setItem('step', 0);
+      var isAndroid =
+        bslua.indexOf('Android') > -1 || bslua.indexOf('Adr') > -1;
+      var isiOS = !!bslua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+
+      if (isiOS) {
+        localStorage.setItem('dev_type', 'ios');
+      } else {
+        localStorage.setItem('dev_type', 'android');
+      }
+      // if (bslua.indexOf('bsl') >= 0) {
+      function bslid(dev_no) {
+        console.log('初始化');
+        console.log('ddev_no', dev_no);
+        localStorage.setItem('dev_type', 'ios');
+        localStorage.setItem('dev_no', dev_no);
+        if (dev_no.indexOf('-') < 0) {
+          BSL.OpenStep();
+          console.log('打开计步器');
+          localStorage.setItem('dev_type', 'android');
+        }
+
+        setInterval(function() {
+          localStorage.setItem('dev_no', dev_no);
+          BSL.GetStepCount('bslstep');
+        }, 3000);
+      }
+
+      function bslstep(s) {
+        console.log('跑步数据源 :>> ', s);
+        if (s) {
+          localStorage.setItem('step', s);
+        } else {
+          console.log('error');
+        }
+      }
+
+      function bsloaid(dev_oaid) {
+        var oaidStr = JSON.parse(dev_oaid);
+        localStorage.setItem('dev_oaid', oaidStr.oaid);
+      }
+      function appFinishiLoad() {
+        BSL.PhoneID('bslid');
+        BSL.GetOAID('bsloaid');
+        console.log('appFinishiLoad');
+      }
+      // appFinishiLoad();
+
+      const baseSize = 32;
+      // // 设置 rem 函数
+      function setRem() {
+        // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
+        const scale = document.documentElement.clientWidth / 375;
+        // 设置页面根节点字体大小
+        document.documentElement.style.fontSize =
+          baseSize * Math.min(scale, 2) + 'px';
+      }
+
+      // 初始化
+      setRem();
+      // 改变窗口大小时重新设置 rem
+      window.onresize = function() {
+        setRem();
+      };</script><link href="js/chunk-1d66e3dd.bae56fff.js" rel="prefetch"><link href="js/chunk-4740ba29.58be8a35.js" rel="prefetch"><link href="js/chunk-76a7aac0.fada033e.js" rel="prefetch"><link href="js/home.fc3a0ed4.js" rel="prefetch"><link href="js/app.d820c32a.js" rel="preload" as="script"><link href="js/chunk-vendors.73737258.js" rel="preload" as="script"><link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="sport-h5"><link rel="apple-touch-icon" href="img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript></noscript><div id="app"></div><script src="js/chunk-vendors.73737258.js"></script><script src="js/app.d820c32a.js"></script></body></html>

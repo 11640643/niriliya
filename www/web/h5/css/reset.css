@@ -1,0 +1,123 @@
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	font-family: ' Microsoft YaHei UI', '微软雅黑', 'PingFang SC', 'Heiti SC', ' Droid Sans';
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	border: 0;
+}
+
+a,
+button,
+input {
+	-webkit-tap-highlight-color: transparent;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+html {
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	width: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: none;
+}
+
+html,
+body {
+	background: #fff;
+	height: 100%;
+	min-height: 100%;
+}
+button,
+input,
+select,
+textarea {
+	outline: none;
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+}

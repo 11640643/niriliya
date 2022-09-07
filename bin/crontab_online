@@ -1,0 +1,29 @@
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php anwser add >> /data/web/yundong/web/backend/public/logs/task/anwser_add_`date +\%Y\%m\%d`.log
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php anwser money >>/data/web/yundong/web/backend/public/logs/task/anwser_money_`date +\%Y\%m\%d`.log
+
+#apr
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php apr item >> /data/web/yundong/web/backend/public/logs/task/apr_item_`date +\%Y\%m\%d`.log
+
+#flow
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php flow flow >> /data/web/yundong/web/backend/public/logs/task/low_flow_`date +\%Y\%m\%d`.log
+
+#funds
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php funds run >> /data/web/yundong/web/backend/public/logs/task/funds_run_`date +\%Y\%m\%d`.log
+
+#reward
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php reward item >> /data/web/yundong/web/backend/public/logs/task/reward_item_`date +\%Y\%m\%d`.log
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php reward invest >> /data/web/yundong/web/backend/public/logs/task/reward_invest_`date +\%Y\%m\%d`.log
+
+#sms
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php sms send >> /data/web/yundong/web/backend/public/logs/task/sms_send_`date +\%Y\%m\%d`.log
+
+#socket
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php socket main >> /data/web/yundong/web/backend/public/logs/task/socket_main_`date +\%Y\%m\%d`.log
+
+#user
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php user run >> /data/web/yundong/web/backend/public/logs/task/user_run_`date +\%Y\%m\%d`.log
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php user level >> /data/web/yundong/web/backend/public/logs/task/user_level_`date +\%Y\%m\%d`.log
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php user statis >> /data/web/yundong/web/backend/public/logs/task/user_statis_`date +\%Y\%m\%d`.log
+
+#progress
+*/1 * * * * /usr/bin/php /data/web/yundong/web/backend/apps/web/bin/cli.php progress update >> /data/web/yundong/web/backend/public/logs/task/progress_update_`date +\%Y\%m\%d`.log

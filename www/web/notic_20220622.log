@@ -1,0 +1,33 @@
+收到代付回调数据array (
+) 
+组装的签名数据'countryCode=&currencyCode=&merchantNo=&merchantOrderNo=&orderAmout=&orderNo=&orderTime=&transferAmount=&transferStatus=&transferTime=' 
+验签失败 
+收到代付回调数据array (
+) 
+组装的签名数据'countryCode=BRA&currencyCode=BRL&merchantNo=3018220118001&merchantOrderNo=1655877141985319&orderAmout=200.00&orderNo=7015220622000797&orderTime=2022-06-22 02:52:22&transferAmount=185.00&transferStatus=SUCCESS&transferTime=2022-06-22 02:57:11' 
+验签成功 
+收到代付回调数据array (
+) 
+组装的签名数据'countryCode=BRA&currencyCode=BRL&merchantNo=3018220118001&merchantOrderNo=1655877141985319&orderAmout=200.00&orderNo=7015220622000797&orderTime=2022-06-22 02:52:22&transferAmount=185.00&transferStatus=SUCCESS&transferTime=2022-06-22 02:57:11' 
+验签成功 
+收到代付回调数据array (
+  'orderNo' => '7015220622001076',
+  'orderTime' => '2022-06-22 03:52:51',
+  'transferStatus' => 'SUCCESS',
+  'transferTime' => '2022-06-22 03:54:53',
+  'countryCode' => 'BRA',
+  'orderAmout' => '200.00',
+  'transferAmount' => '185.00',
+  'sign' => 'cNP/Aj328xXNtXtP66P5482sJQR92zIKEOiBfYuQ0thjGIqpLpdwAB1M+tfG1jgGqZ6belZpBw9w9P4ySgoID56zs+SRm7qWtR4L41Vl1OwPwPNcYWnqyPpBRHlQM0IzPJfKx+vXltUsD9Ga2tMRZPFXMqHQkxdhJ97Zajqn0U4=',
+  'merchantOrderNo' => '1655880770737541',
+  'currencyCode' => 'BRL',
+  'merchantNo' => '3018220118001',
+) 
+收到代付回调数据array (
+) 
+收到代付回调数据array (
+) 
+收到代付回调数据array (
+) 
+收到代付回调数据array (
+) 

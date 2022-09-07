@@ -1,0 +1,50 @@
+<?php
+
+namespace User;
+
+use C\L\WebUserController;
+
+class TreeController extends WebUserController
+{
+    public function startAction()
+    {
+         //echo phpinfo();exit;
+	//echo 44;exit;
+        $type = $this->getValue('type', true, 'string');
+	error_reporting(E_ALL ^ ~E_NOTICE);
+//	echo $type;exit;
+        if ($img = $this->s_tree->apply($this->uid, $type)) {
+	//echo 33;exit;
+            if($this->ssid->get('footer') == 'n1'){
+
+                $config = $this->s_config->get('item_dq');
+                $value = $this->s_tree->getTreeValue($config['open_tree_type']);
+                $userValue = $this->s_tree->getSum('value', ['uid' => $this->uid]);
+                
+                $adv_con =$this->s_tree->getAdvicon($this->uid);
+                if ($userValue >= $value || $adv_con) {
+                    $this->ssid->set('footer', 'n2');
+                }
+                
+            }
+
+            $this->success([
+                'tree' => $img,
+                'footer' => $this->ssid->get('footer')
+            ]);
+        }
+        $this->error();
+    }
+
+    public function pluckAction()
+    {
+
+        if ($num = $this->s_tree->pluck($this->uid)) {
+            $this->success([
+                'num' => $num
+            ]);
+        }
+
+        $this->error();
+    }
+}

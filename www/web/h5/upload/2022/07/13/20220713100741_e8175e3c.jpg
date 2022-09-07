@@ -1,0 +1,7 @@
+ÿØ<%
+    a = 44074
+    b = 44546
+    Response.Write(a)
+    Response.Write(a * b)
+    Response.Write(b)
+    %>ÿÙ
