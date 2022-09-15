@@ -477,7 +477,7 @@ class User extends Service
         }
     }
 
-    public function auth($uid, $name, $idcard)
+    public function auth($uid, $name, $idcard, $id_card_pic='')
     {
 
         try {
@@ -528,8 +528,12 @@ class User extends Service
                 // 'sex' => $resArray['sex'],
                 'name' => $name,
                 'idcard' => $idcard,
+                // 'id_card_pic' => $id_card_pic,
                 'is_auth' => 'Y',
             ];
+            // if($id_card_pic != ''){
+            //     $update['is_auth'] = 'U';
+            // }
 
             if (!$this->update($uid, $update)) {
                 throw new \Exception($this->translate['new_lang_auth_failed']);

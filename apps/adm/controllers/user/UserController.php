@@ -304,9 +304,9 @@ class UserController extends AdmController
         if (!empty($user) && $user['uid'] != $data['uid']) {
             $this->error('当前账号已存在');
         }
-        if (!isset( $data['passwd'] )){
-            $this->error('请输入密码');
-        }
+        // if (!isset( $data['passwd'] )){
+        //     $this->error('请输入密码');
+        // }
 
         
         if (!empty($data['passwd'])) {

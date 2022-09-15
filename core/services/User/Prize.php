@@ -67,6 +67,7 @@ class Prize extends Service
             $numArray = $this->di['s_user']->lockUpdate($uid, -1, 'prize_num');
             if ($numArray === false) {
                 $msg = $this->di['message']->getSerMsg();
+                echo $msg; exit;
                 throw new \Exception($msg == $this->translate['less_amount'] ? $this->translate['insufficient_times'] : $msg);
             }
 

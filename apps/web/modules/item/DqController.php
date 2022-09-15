@@ -74,13 +74,7 @@ class DqController extends WebUserController
         $itemId = $this->getValue('id', true, 'int');
         $passwd = $this->getValue('passwd', true, 'string');
         $vouchers_money = $this->getValue('vouchers_money', false, 'float');
-        $__token__ = $this->getValue('__token__', true, 'string');
-        if(!empty($_SESSION['__token__'])){
-            if($__token__ != $_SESSION['__token__']){
-                $this->error($this->translate['param_error']);
-            }
-            $_SESSION['__token__'] = null;
-        }
+        
         
         if ($cid = $this->s_il->dqapply($this->uid, $money, $itemId, $passwd, $vouchers_money)) {
             $this->success(['cid' => $cid]);

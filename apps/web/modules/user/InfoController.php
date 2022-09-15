@@ -71,6 +71,13 @@ class InfoController extends WebUserController
     {
         $name = $this->getValue('name', true);
         $idcard = $this->getValue('idcard', true);
+        // $card1 = $this->getValue('card1', true);
+        // $card2 = $this->getValue('card2', trueA);
+        // if($card1 == '_' && $card2 == '_'){
+        //     $id_card_pic = '';
+        // } else {
+        //     $id_card_pic = json_encode(['card1' => $card1, 'card2' => $card2]);
+        // }
 
         if ($this->s_user->auth($this->uid, $name, $idcard)) {
             $this->ssid->set('is_auth', 'Y');
@@ -85,7 +92,7 @@ class InfoController extends WebUserController
     public function infoAction()
     {
         $user = $this->s_user->search($this->uid, [], [
-            'is_auth', 'name', 'idcard', 'mobile','authFailed'
+            'is_auth', 'name', 'idcard', 'mobile','authFailed','id_card_pic'
         ]);
         $this->success($user);
     }
